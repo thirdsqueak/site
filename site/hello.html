@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный дилер Nissan. Продажа и обслуживание автомобилей.">
+    <title>Главная - Дилер Nissan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- переписать классы, сделать нормальные кнопки нахуй чтобы было ок навигация через верхний бар снизу фото и функционал -->
+    <header>
+        <h2 class="navigation"> <a href="hello.html"><img src="img_base/nissan_logo.png" alt="error" width="66" height="54"></a></h2>
+        <nav class="navigation">
+            <a href="contact.html">Контакты</a>
+            <a href="servis.html">Услуги</a>
+            <a href="index.html">Автомобили</a>
+            <button class="loginbutton-pop">Войти</button>
+        </nav>
+    </header>
+    
+    
+    <main class="main">
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="img_base/nissan1.jpg" alt="Фото 1">
+            </div>
+            <div class="gallery-info">
+                <p>Новый Nissan X-trail</p>
+                <button class="gallery-info-button">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="img_base/juke_promo.jpg" alt="Фото 2">
+            </div>
+            <div class="gallery-info">
+                <p>Новый Nissan Juke</p>
+                <button class="gallery-info-button">Узнать больше</button>
+            </div>
+            <div class="gallery-item">
+                <img src="img_base/2024-Nissan-GT-R-NISMO-4_large.png" alt="Фото 3">
+            </div>
+            <div class="gallery-info">
+                <p>Совершенство, Nissan GT-R</p>
+                <button class="gallery-info-button">Узнать больше</button>
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2024 Дилер Nissan</p>
+    </footer>
+   
+    <script>
+        let lastScrollY = window.scrollY; // Переменная для хранения предыдущего положения прокрутки
+        const header = document.querySelector("header");
+    
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > lastScrollY) {
+                
+                header.style.transform = "translateY(-100%)";
+            } else if (window.scrollY < lastScrollY) {
+                
+                header.style.transform = "translateY(0)";
+            }
+            lastScrollY = window.scrollY; // Обновляем значение последней прокрутки
+        });
+    </script>
+    
+</body>
+</html>
